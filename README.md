@@ -7,8 +7,6 @@ make
 主程序为:
 ```
 #include "../net/Ionet.h"
-#include <iostream>
-using namespace std;
 
 int main(void)
 {
