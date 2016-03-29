@@ -11,7 +11,7 @@ namespace ionet
     public:
         Epoller();
         ~Epoller();
-        Epoller(EventLoop *loop);
+        explicit Epoller(EventLoop *loop);
         void addEvent(int fd,int event);
         void delEvent(int fd,int event);
         void epollWait(std::vector<int>& vfd);

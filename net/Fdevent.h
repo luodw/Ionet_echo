@@ -10,7 +10,7 @@ namespace ionet
     public:
         //利用c++11加入的function定义回调函数
         typedef std::function<void(int)> fd_callback;
-        Fdevent(int fd);
+        explicit Fdevent(int fd);
         void setReadable(bool flag);
         void setWriteable(bool flag);
 

@@ -43,7 +43,7 @@ namespace ionet
             buffer.len=sizeof(mesg)+nr;
             buffer.buf=(char*)malloc(buffer.len);
             char *p=strcpy(buffer.buf,mesg);
-            p += sizeof(mesg);
+            p += sizeof(mesg)-1;
             strcpy(p, buf1);
             //因为读取客户端数据,服务器处理之后就要回复客户端,所以必须注册一个客户端写事件,这里直接用
             //c++11的lambda函数注册
